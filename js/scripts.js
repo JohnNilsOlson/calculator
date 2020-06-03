@@ -14,7 +14,13 @@ const div = function(number1, number2) {
 	return number1 / number2;
 };
 
-const number1 = parseInt(prompt("Enter a number:"));
-const number2 = parseInt(prompt("Enter a number:"));
+$(document).ready(function() {
+	$("form#add").submit(function(event) {
+		event.preventDefault();
+		const number1 = parseInt($("#add1").val());
+		const number2 = parseInt($("#add2").val());
+		alert(add(number1, number2))
+	});
+});
 
-alert((number1, number2));
+
